@@ -5,7 +5,7 @@ A package to create generic radio group controls in SwiftUI using static member 
 ## Usage
 Initializers are provided for `Sequence`s of `Identifiable` elements
 ```
-RadioPicker(items: numbers, selection: $selection) { item, isSelected in
+RadioGroup(items: numbers, selection: $selection) { item, isSelected in
     Text("Item: \(item.value)")
         .padding()
         .background(isSelected ? Color.blue : Color.gray)
@@ -14,7 +14,7 @@ RadioPicker(items: numbers, selection: $selection) { item, isSelected in
 ```
 and for `Sequence`s with `Element`s where there is a `Hashable` `KeyPath`
 ```
-RadioPicker(items: (1...5), id: \.self, selection: $selection) { item, isSelected in
+RadioGroup(items: (1...5), id: \.self, selection: $selection) { item, isSelected in
     Text("Item: \(item.value)")
         .padding()
         .background(isSelected ? Color.blue : Color.gray)
